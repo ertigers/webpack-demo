@@ -2,7 +2,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 var path = require('path');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist"
+  },
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
